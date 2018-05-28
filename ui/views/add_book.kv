@@ -1,0 +1,59 @@
+#:import SingleLineTextField kivymd.textfields.SingleLineTextField
+#:import MDIconButton kivymd.button.MDIconButton
+#:import MDFlatButton kivymd.button.MDFlatButton
+#:import MDFloatingActionButton kivymd.button.MDFloatingActionButton
+
+<AddBookScreen>:
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'
+        padding: 50, 50
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 5, 5
+            size_hint: 1, .7
+
+            BoxLayout:
+                MDIconButton:
+                    icon: 'account'
+                SingleLineTextField:
+                    id: title_field
+                    hint_text: 'Title'
+
+            BoxLayout:
+                MDIconButton:
+                    icon: 'time'
+                SingleLineTextField:
+                    id: year_of_publication_field
+                    hint_text: 'Year of publication'
+
+            BoxLayout:
+                MDIconButton:
+                    icon: 'file'
+                SingleLineTextField:
+                    id: text_path_field
+                    text: 'File with text...'
+                    disabled: True
+                MDFlatButton:
+                    id: button_ok
+                    text: 'Choose file'
+
+            BoxLayout:
+                MDIconButton:
+                    icon: 'image'
+                SingleLineTextField:
+                    id: cover_photo_path_field
+                    text: 'File with cover photo...'
+                    disabled: True
+                MDFlatButton:
+                    id: button_ok
+                    text: 'Choose cover photo'
+
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+                size_hint: 1, None
+                height: dp(40)
+                MDFlatButton:
+                    id: save_book_button
+                    text: 'Save new Book'

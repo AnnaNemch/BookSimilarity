@@ -1,0 +1,29 @@
+#:import MDFlatButton kivymd.button.MDFlatButton
+
+<SearchBookScreen>:
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'top'
+        padding: 50, 35
+        StackLayout:
+            SingleLineTextField:
+                id: search_book_field
+                icon: 'search'
+                hint_text: 'Enter book title ...'
+            AnchorLayout:
+                size_hint: 1, None
+                height: dp(40)
+                MDFlatButton:
+                    id: search_book_button
+                    icon: 'search'
+                    text: 'Find similar books!'
+                    on_press: app.show_book_list()
+            ScrollView:
+                GridLayout:
+                    id: similar_books
+                    cols: 1
+                    size_hint_y: None
+            BookScreenManagement:
+                id: book_manager
+                background_color: app.theme_cls.primary_dark
+

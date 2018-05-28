@@ -1,0 +1,23 @@
+#:import Toolbar kivymd.toolbar.Toolbar
+
+<Navigator>:
+    NavigationDrawerIconButton:
+        icon: 'book'
+        text: 'Books'
+        on_press: app.show_search_book()
+    NavigationDrawerIconButton:
+        icon: 'plus'
+        text: 'Add Book'
+        on_press: app.show_add_book()
+    NavigationDrawerIconButton:
+        icon: 'face'
+        text: 'Authors'
+        on_press: app.show_search_author()
+    NavigationDrawerIconButton:
+        icon: 'book'
+        text: 'Topics'
+        on_press: app.show_search_topic()
+    NavigationDrawerIconButton:
+        icon: 'settings'
+        text: 'About'
+        on_press: app.show_about()

@@ -1,0 +1,14 @@
+#:import Toolbar kivymd.toolbar.Toolbar
+
+<StartScreen>
+    Screen:
+        BoxLayout:
+            orientation: 'vertical'
+            Toolbar:
+                id: toolbar
+                title: 'Book Store'
+                background_color: app.theme_cls.primary_dark
+                left_action_items: [['menu', lambda x: app.nav_drawer.toggle()]]
+            MainScreenManagement:
+                id: main_manager
+                background_color: app.theme_cls.primary_dark
